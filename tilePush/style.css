@@ -1,0 +1,69 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.desk {
+  display: grid;
+  position: relative;
+}
+
+.block {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.block:hover {
+  transform: translateY(5px);
+  box-shadow: none !important; /* потому что стили js выше*/
+  transition: all 0.2s;
+}
+
+.active {
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.cell {
+  transition: all 0.6s ease;
+}
+
+.block-active {
+  transition: all 0.6s ease;
+}
+
+.win-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-window {
+  width: 40%;
+  height: 35%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
